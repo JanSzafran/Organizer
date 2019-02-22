@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="bulma-0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <title>Organizer</title>
+  </head>
+  <body class="has-navbar-fixed-top">
+
+    <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <span class="navbar-item">
+          <a href="#">
+            <i class="fas fa-calendar-check" style="color: gray; font-size: 27px;"></i>
+          </a>
+        </span>
+
+        <span class="navbar-item" style="font-weight: bold; color: white;">
+          Organize Yourself!
+        </span>
+      </div>
+    </nav>
+
+    <section class="hero is-fullheight-with-navbar">
+      <div class="hero-body">
+
+        <div class="tile is-vertical is-12">
+
+          <div class="tile is-12">
+            <span class="dateAndMonth dateContainer"></span>
+          </div>
+
+          <table class="table is-bordered daysContainer">
+            <thead>
+              <tr>
+                <td>Monday</td>
+                <td>Thursday</td>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+                <td>Saturday</td>
+                <td>Sunday</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="first7"></td>
+                <td class="first7"></td>
+                <td class="first7"></td>
+                <td class="first7"></td>
+                <td class="first7"></td>
+                <td class="first7"></td>
+                <td class="first7"></td>
+              </tr>
+              <tr>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+              </tr>
+              <tr>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+              </tr>
+              <tr>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+              </tr>
+              <tr>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+                <td class="tableDays"></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </body>
+</html>

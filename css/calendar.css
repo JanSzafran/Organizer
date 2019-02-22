@@ -1,0 +1,24 @@
+.body {
+  height: 100vh;
+}
+
+.dateContainer {
+  position: relative;
+  font-size: 2em
+}
+
+tbody {
+  font-size: 1.5em;
+}
+
+tbody td {
+  height: 15vh;
+}
+
+.tableDaysHov:hover {
+  background-color: lightgray;
+}
+
+.disabled {
+  background-color: gray
+}
