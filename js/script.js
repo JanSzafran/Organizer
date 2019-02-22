@@ -118,6 +118,7 @@ function addDaysToCalendar() {
   }
   //add disable class (starts with 7 to avoid adding a class to day name)
       //add disable class for empty cells
+      //try-catch just to avoid finishing program with error / not working without try-catch
   try {
     for (let i = 7; i <= allCells.length; i++) {
       if(allCells[i].classList.contains('editable') == false) {
@@ -132,7 +133,7 @@ function addDaysToCalendar() {
   //creates note div after clicking on cells
 
 function createNotes() {
-  
+
 }
 
 //create calendar ends here
