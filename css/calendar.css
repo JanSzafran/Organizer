@@ -15,10 +15,21 @@ tbody td {
   height: 15vh;
 }
 
-.tableDaysHov:hover {
+.tableDaysHover:hover {
   background-color: lightgray;
 }
 
 .disabled {
   background-color: gray
+}
+
+.note {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 99;
 }
