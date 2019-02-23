@@ -38,6 +38,7 @@ function buildCalendar() {
   addDaysToCalendar();
   disablePastDays();
   disableEmptyCells();
+  getEditableCells();
 }
 
 //dates STARTS HERE
@@ -100,11 +101,14 @@ function disableEmptyCells(){
       allCells[i].classList.add('disabled');
     }
   }
+}
+
+function getEditableCells() {
   let editableCells = document.getElementsByClassName('editable');
   return editableCells;
 }
 
-function createNoteDiv() {
+function createNote() {
   let noteDiv = document.createElement('div');
   noteDiv.classList.add('note');
   document.body.appendChild(noteDiv);
