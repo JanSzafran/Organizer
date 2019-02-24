@@ -23,13 +23,88 @@ tbody td {
   background-color: gray
 }
 
+.editable {
+  cursor: pointer;
+}
+
 .note {
   position: absolute;
-  width: 25%;
-  height: 50%;
+  width: 50%;
+  height: 80%;
   background-color: white;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  z-index: 99;
+  background-color: lightgray;
+}
+
+.addItemSpan {
+  display: inline-block;
+  position: absolute;
+  width: 70%;
+  top: 7%;
+  left: 2%;
+  border-bottom: 1px solid black;
+}
+
+.taskInput {
+  display: inline-block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 25%;
+  border-width:1px;
+}
+
+.addTaskButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 18%;
+  left: 70%;
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.todoSpan {
+  display: inline-block;
+  position: absolute;
+  width: 70%;
+  top: 28%;
+  left: 2%;
+  border-bottom: 1px solid black;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.spanContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+}
+
+.deleteButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 5%;
+  left: 95%;
+}
+
+.saveButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 50%;
 }
