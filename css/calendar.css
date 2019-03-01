@@ -15,12 +15,13 @@ tbody td {
   height: 15vh;
 }
 
-.tableDaysHover:hover {
-  background-color: lightgray;
+.disabled {
+  color: red;
+  background-color: lightgray
 }
 
-.disabled {
-  background-color: gray
+.empty {
+  background-color: gray;
 }
 
 .editable {
@@ -35,7 +36,7 @@ tbody td {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-color: lightgray;
+  background-color: white;
 }
 
 .addItemSpan {
@@ -47,28 +48,33 @@ tbody td {
   border-bottom: 1px solid black;
 }
 
-.taskInput {
-  display: inline-block;
+.newContainer{
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 20%;
-  left: 25%;
-  border-width:1px;
+  top: 15%;
+  left: 2%;
+  width: 98%;
+  height: 10%;
+}
+
+.taskInput {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid black;
 }
 
 .addTaskButton {
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 18%;
-  left: 70%;
+  left: 66%;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: 0px;
   color: #888;
-  font-size: 15px;
-  width: 60px;
-  margin: 10px 0 0;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  font-size: 1.2em;
 }
 
 .todoSpan {
@@ -78,6 +84,10 @@ tbody td {
   top: 28%;
   left: 2%;
   border-bottom: 1px solid black;
+}
+
+.taskSpan {
+  padding-bottom: 10px;
 }
 
 .checked {
@@ -93,6 +103,7 @@ tbody td {
   transform: translate(-50%, -50%);
   top: 60%;
   left: 50%;
+  overflow: auto;
 }
 
 .deleteButton {
@@ -107,4 +118,8 @@ tbody td {
   transform: translate(-50%, -50%);
   top: 90%;
   left: 50%;
+}
+
+.pointer {
+  cursor: pointer;
 }
