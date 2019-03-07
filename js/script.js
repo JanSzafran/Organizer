@@ -3,27 +3,29 @@ function buildCalendar() {
   getFirstDay();
   addClassTableDays();
   addDaysToCalendar();
+  changeColorOfCurrentDay();
   disablePastDays();
   disableEmptyCells();
+  removeNoteOnClickIfExists();
   createNoteOnClick();
 }
 
-let dateSpan = document.getElementsByClassName('dateAndMonth');
+const dateSpan = document.getElementsByClassName('dateAndMonth');
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
-let dateInstance = new Date();
-let currentDay = dateInstance.getDate();
-let currentYear = dateInstance.getFullYear();
-let monthNumber = dateInstance.getMonth();
-let currentMonth = monthNames[dateInstance.getMonth()];
+const dateInstance = new Date();
+const currentDay = dateInstance.getDate();
+const currentYear = dateInstance.getFullYear();
+const monthNumber = dateInstance.getMonth();
+const currentMonth = monthNames[dateInstance.getMonth()];
 
 function setupCurrentDate() {
   dateSpan[0].innerHTML += (currentMonth + " " + currentYear);
 }
 
-let getDaysInMonth = new Date(dateInstance.getFullYear(), dateInstance.getMonth()+1, 0).getDate();
+const getDaysInMonth = new Date(dateInstance.getFullYear(), dateInstance.getMonth()+1, 0).getDate();
 
 function getFirstDay() {
   let firstDayDate = new Date(currentYear, monthNumber, 1);
@@ -54,6 +56,12 @@ function addDaysToCalendar() {
   return daysToDraw;
 }
 
+
+function changeColorOfCurrentDay() {
+  const daysToColor = document.getElementsByClassName('tableDays');
+  daysToColor[currentDay-1].style.color = "blue";
+}
+
 function disableDay(day) {
   day.classList.add('disabled');
   day.classList.remove('editable', 'tableDaysHover');
@@ -67,7 +75,7 @@ function disablePastDays() {
 }
 
 function disableEmptyCells(){
-  let allCells = Array.prototype.slice.call(document.querySelectorAll('td'));
+  const allCells = Array.prototype.slice.call(document.querySelectorAll('td'));
   for(let i = 0; i <= allCells.length -1; i++) {
     if(allCells[i].innerText === "") {
       allCells[i].classList.add('empty');
@@ -75,14 +83,26 @@ function disableEmptyCells(){
   }
 }
 
+function removeNoteOnClickIfExists() {
+  const editableCells = document.getElementsByClassName('editable');
+  for (let i = 0; i < editableCells.length; i++) {
+    editableCells[i].addEventListener('click', function() {
+      try{
+        const note = document.getElementsByClassName('note');
+        note[0].parentNode.removeChild(note[0]);
+      } catch(TypeError) {
+
+      }
+    })
+  }
+}
 
 function createNoteOnClick() {
 const editableCells = document.getElementsByClassName('editable');
 for(let i = 0; i < editableCells.length; i++) {
-  editableCells[i].addEventListener('click', buildNote);
+    editableCells[i].addEventListener('click', buildNote);
   };
 }
-
 
 buildCalendar();
 
@@ -171,7 +191,7 @@ function createSaveNoteButton() {
 }
 
 function createTask(){
-  const valueToAdd = document.querySelector('input').value;
+  let valueToAdd = document.querySelector('input').value;
   const newTaskSpan = document.createElement('span');
   newTaskSpan.classList.add('taskSpan', 'pointer');
   const spanContainer = document.getElementsByClassName('spanContainer');
@@ -207,7 +227,6 @@ function closeNote() {
   })
 }
 
-window.onload = function () {
-    const loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
-    console.log('Page load time is '+ loadTime);
+function checkIfNoteExists() {
+  document.getElementsByClassName('note');
 }
