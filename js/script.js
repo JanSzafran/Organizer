@@ -6,7 +6,6 @@ function buildCalendar() {
   changeColorOfCurrentDay();
   disablePastDays();
   disableEmptyCells();
-  removeNoteOnClickIfExists();
   createNoteOnClick();
 }
 
@@ -83,17 +82,10 @@ function disableEmptyCells(){
   }
 }
 
-function removeNoteOnClickIfExists() {
-  const editableCells = document.getElementsByClassName('editable');
-  for (let i = 0; i < editableCells.length; i++) {
-    editableCells[i].addEventListener('click', function() {
-      try{
-        const note = document.getElementsByClassName('note');
-        note[0].parentNode.removeChild(note[0]);
-      } catch(TypeError) {
-
-      }
-    })
+function deleteOldNote() {
+  const note = document.getElementsByClassName('note');
+  if(note.length) {
+    note[0].parentNode.removeChild(note[0]);
   }
 }
 
@@ -122,6 +114,7 @@ function buildNote() {
 }
 
 function createNote() {
+  deleteOldNote();
   const noteDiv = document.createElement('div');
   noteDiv.classList.add('note');
   document.body.appendChild(noteDiv);
