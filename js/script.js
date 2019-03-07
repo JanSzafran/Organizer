@@ -82,13 +82,6 @@ function disableEmptyCells(){
   }
 }
 
-function deleteOldNote() {
-  const note = document.getElementsByClassName('note');
-  if(note.length) {
-    note[0].parentNode.removeChild(note[0]);
-  }
-}
-
 function createNoteOnClick() {
 const editableCells = document.getElementsByClassName('editable');
 for(let i = 0; i < editableCells.length; i++) {
@@ -111,6 +104,13 @@ function buildNote() {
   addValueToTodoOnKeyPress();
   createTasksContainer();
   closeNote();
+}
+
+function deleteOldNote() {
+  const note = document.getElementsByClassName('note');
+  if(note.length) {
+    note[0].parentNode.removeChild(note[0]);
+  }
 }
 
 function createNote() {
