@@ -5,3 +5,5 @@ Creating a user doesnt work atm, just log-in using these: login: user1 password:
 Everything is created with vanilla JS, except the table, which is coded in html.
 
 Feel free to upgrade this project!
+
+https://janszafran.github.io/Organizer/?fbclid=IwAR2tD092MFSk3tlODdlWECmHeBYsLDijVHEfFObyl5XYJ5OJ1xz1z3inK3o
