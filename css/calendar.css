@@ -1,0 +1,125 @@
+.body {
+  height: 100vh;
+}
+
+.dateContainer {
+  position: relative;
+  font-size: 2em
+}
+
+tbody {
+  font-size: 1.5em;
+}
+
+tbody td {
+  height: 15vh;
+}
+
+.disabled {
+  color: red;
+  background-color: lightgray
+}
+
+.empty {
+  background-color: gray;
+}
+
+.editable {
+  cursor: pointer;
+}
+
+.note {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: white;
+}
+
+.addItemSpan {
+  display: inline-block;
+  position: absolute;
+  width: 70%;
+  top: 7%;
+  left: 2%;
+  border-bottom: 1px solid black;
+}
+
+.newContainer{
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  width: 98%;
+  height: 10%;
+}
+
+.taskInput {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid black;
+}
+
+.addTaskButton {
+  position: absolute;
+  left: 66%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0px;
+  color: #888;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.todoSpan {
+  display: inline-block;
+  position: absolute;
+  width: 70%;
+  top: 28%;
+  left: 2%;
+  border-bottom: 1px solid black;
+}
+
+.taskSpan {
+  padding-bottom: 10px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.spanContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  overflow: auto;
+}
+
+.deleteButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 5%;
+  left: 95%;
+}
+
+.saveButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 50%;
+}
+
+.pointer {
+  cursor: pointer;
+}
