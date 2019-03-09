@@ -8,4 +8,4 @@ Feel free to upgrade this project!
 
 <h1>LIVE</h1>
 
-https://janszafran.github.io/Organizer/?fbclid=IwAR2tD092MFSk3tlODdlWECmHeBYsLDijVHEfFObyl5XYJ5OJ1xz1z3inK3o
+https://janszafran.github.io/Organizer/
