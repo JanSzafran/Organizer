@@ -12,5 +12,5 @@ https://janszafran.github.io/Organizer/
 
 # Preview
 <div>
-  <iframe src="https://giphy.com/embed/1zRbGdUHcbXVCGEVoy" width="70%" height="50%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/1zRbGdUHcbXVCGEVoy">via GIPHY</a></p> 
+  <img src="https://imgur.com/a/KEhEBqs" alt="app-preview">
 </div>
