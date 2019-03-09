@@ -219,7 +219,3 @@ function closeNote() {
     note[0].parentNode.removeChild(note[0]);
   })
 }
-
-function checkIfNoteExists() {
-  document.getElementsByClassName('note');
-}
