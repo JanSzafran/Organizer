@@ -12,5 +12,5 @@ https://janszafran.github.io/Organizer/
 
 # Preview
 <div>
-  <img src="https://imgur.com/sZAaMU5.gif" alt="app-preview" width="80%">
+  <img src="https://imgur.com/mZEoY5q.gif" alt="app-preview" width="80%">
 </div>
